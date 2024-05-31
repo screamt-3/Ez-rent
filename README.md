@@ -184,11 +184,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - your_email@example.com
+Seah Joel - seahjoel9@gmail.com
+Marvin Choo - marvinchoo.mh@gmail.com
 
-Project Link: [https://github.com/your-username/ezrent](https://github.com/your-username/ezrent)
+Project Link: [https://github.com/screamt-3/ezrent](https://github.com/screamt-3/ezrent)
 
 ---
-
-This template provides a comprehensive README for your project. Make sure to replace placeholders like `your-username`, `your_mongodb_connection_string`, `your_jwt_secret_key`, and others with actual information specific to your project.
-
