@@ -1,3 +1,27 @@
+# Orbital24
+
+Level of Achievement - Apollo 11
+
+Motivation - Throughout the two semesters we have experienced studying NUS we have bumped into a myriad of people coming from all walks of life and more often than not we would bump into an international student. The question/topic that would often pop up would be “where are you staying?”. While some are fortunate enough to secure a place on campus others face the issue of renting elsewhere in Singapore. We often hear complaints of their landlord being overly fussy and the process being tedious and time-consuming. Additionally, with the increasing number of students and expatriates coming to study or work in Singapore, finding suitable accommodation has become even more challenging.This project aims to address these challenges by creating a user-friendly platform for rental listings tailored specifically for students and young professionals. Our platform will not only simplify the search process but also provide valuable information and resources to help users make informed decisions about their housing arrangements.
+
+Project scope - Webapp that connects people in the accomodation rental market.
+
+Making an intuitive interface for both parties (potential tenants and landlords) to streamline and simplify the search for rentals. Reducing the time spent and ultimately making the entire process of renting hassle and fuss free. Furthermore, we recognize the importance of creating a supportive community for renters, where they can share their experiences, seek advice, and connect with fellow tenants. Through features such as reviews, forums, and community events, we hope to aid users of our webpage in settling down. We also hope to expand this idea across various rentals such as office spaces, studios and even shophouses, If it were to be proven successful.
+
+User Stories
+- As a foreigner/person who works in Singapore I want to find a short term solution for my accommodation. I want to be able to find a rental room near my work place and be able to find a room to my liking.
+
+- As an International student who wants to live in a clean and hassle free accommodation that is near public transport and the place my place of studies in Singapore, I want to be able to filter down the location of my property within a certain distance from my education institute as well as the ability to view the public transport facilities within my area.
+
+- As a fresh graduate, I want to be able to find affordable and convenient locations for my accommodations. I also want to be able to do so with minimal hassle and being well informed about the owner and the place I am settling for.
+
+Core Features
+Feature 1: Login and Registration page
+Feature 2: Filter rental selections based on multiple filters
+Feature 3: View conditions of the rooms
+Feature 4: Reviews/Ratings for both tenants, owners and apartments
+
+
 # EzRent
 
 EzRent is a web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that currently only provides 
@@ -185,6 +209,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Seah Joel - seahjoel9@gmail.com
+
 Marvin Choo - marvinchoo.mh@gmail.com
 
 Project Link: [https://github.com/screamt-3/ezrent](https://github.com/screamt-3/ezrent)
