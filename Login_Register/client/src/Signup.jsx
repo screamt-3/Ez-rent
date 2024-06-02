@@ -30,7 +30,7 @@ function Signup() {
                         </label>
                         <input
                             type="text"
-                            placeholder="Enter  Name"
+                            placeholder="Enter Name"
                             autoComplete="off"
                             name="name"
                             className="form-control rounded-0"

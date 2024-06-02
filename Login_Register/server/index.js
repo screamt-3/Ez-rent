@@ -1,3 +1,6 @@
+require("dotenv").config()
+
+
 const express = require("express")
 const mongoose = require('mongoose')
 const cors = require("cors")
@@ -7,7 +10,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://localhost:27017/Users")
+
+mongoCon = process.env.mongoConnectionString
+PORT = process.env.PORT
+mongoose.connect(mongoCon)
 
 app.post("/login", (req, res) => {
     const {email, password} = req.body;
@@ -31,6 +37,6 @@ app.post('/register', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log("server is running")
 })
