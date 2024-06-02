@@ -89,16 +89,16 @@ Nothing yet
 
 #### Backend
 
-Navigate to the `Ez-Rent/LoginRegister/server/` directory and install dependencies:
+Navigate to the `./Ez-Rent/Login_Register/server/` directory and install dependencies:
 
 ```bash
-cd /server/
+cd ./Login_Register/server/
 npm install cors express mongoose nodemon dotenv
 ```
 
 #### Frontend
 
-Navigate to the `Ez-Rent/LoginRegister/client/` directory and install dependencies:
+Navigate to the `./Ez-Rent/Login_Register/client/` directory and install dependencies:
 
 ```bash
 cd ../client/
@@ -107,7 +107,14 @@ npm install axios bootstrap react react-dom react-router-dom
 
 ### Set up Environment Variables
 
-Create a `.env` file in the `Ez-Rent/LoginRegister/server/` directory and add the following environment variables:
+If .env file already in server, can skip this step.
+
+Create a `.env` file in the `./Ez-Rent/Login_Register/server/` directory and add the following environment variables:
+
+```bash
+cd ../server/
+touch .env
+```
 
 ```env
 PORT=3001
@@ -121,14 +128,14 @@ mongoConnectionString = "mongodb://localhost:27017/Users"
 Setup Backend.
 
 ```bash
-cd /server/
+cd ../server/
 npm run start
 ```
 
-If unable to connect due to permission denied issues, navigate to `Ez-Rent/LoginRegister/server/node_modules/.bin`.
+If unable to connect due to permission denied issues, navigate to `./Ez-Rent/Login_Register/server/node_modules/.bin`.
 
 ```bash
-cd /node_modules/.bin/
+cd ./node_modules/.bin/
 chmod +x nodemon
 ```
 
@@ -136,10 +143,10 @@ Try the Setup Backend again.
 
 #### Frontend
 
-Open another terminal, navigate to the `Ez-Rent/LoginRegister/client/` directory, and start the React application:
+Open another terminal, navigate to the `./Ez-Rent/Login_Register/client/` directory, and start the React application:
 
 ```bash
-cd /LoginRegister/client/
+cd ./Ez-Rent/LoginRegister/client/
 npm run dev
 ```
 
