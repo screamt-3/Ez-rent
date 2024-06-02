@@ -146,7 +146,7 @@ Try the Setup Backend again.
 Open another terminal, navigate to the `./Ez-Rent/Login_Register/client/` directory, and start the React application:
 
 ```bash
-cd ./Ez-Rent/LoginRegister/client/
+cd ./Ez-Rent/Login_Register/client/
 npm run dev
 ```
 
