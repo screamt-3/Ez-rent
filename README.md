@@ -41,7 +41,7 @@ login and registration functionalities.
 
 ## Demo
 
-You can check out the live demo of the project [here](#).
+You can check out the live demo of the project [here](https://drive.google.com/file/d/10X02XjYHptaxDeKZ0KFgziChCsOYb_-W/view?usp=sharing).
 
 ## Features
 
@@ -77,27 +77,28 @@ To get a local copy up and running, follow these steps.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ezrent.git
-cd ezrent
+git clone https://github.com/screamt-3/Ez-Rent.git
+cd Ez-Rent
 ```
 
 ### Install Dependencies
 
 ```bash
+Nothing yet
 ```
 
 #### Backend
 
-Navigate to the `LoginRegister/server/` directory and install dependencies:
+Navigate to the `Ez-Rent/LoginRegister/server/` directory and install dependencies:
 
 ```bash
-cd LoginRegister/server/
-npm install cors express mongoose nodemon
+cd /server/
+npm install cors express mongoose nodemon dotenv
 ```
 
 #### Frontend
 
-Navigate to the `/LoginRegister/client/` directory and install dependencies:
+Navigate to the `Ez-Rent/LoginRegister/client/` directory and install dependencies:
 
 ```bash
 cd ../client/
@@ -106,26 +107,36 @@ npm install axios bootstrap react react-dom react-router-dom
 
 ### Set up Environment Variables
 
-Create a `.env` file in the `backend` directory and add the following environment variables:
+Create a `.env` file in the `Ez-Rent/LoginRegister/server/` directory and add the following environment variables:
 
 ```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
+PORT=3001
+mongoConnectionString = "mongodb://localhost:27017/Users"
 ```
 
 ### Start the Application
 
 #### Backend
 
+Setup Backend.
+
 ```bash
-cd /LoginRegister/server/
+cd /server/
 npm run start
 ```
 
+If unable to connect due to permission denied issues, navigate to `/Ez-Rent/LoginRegister/server/node_modules/.bin`.
+
+```bash
+cd /node_modules/.bin/
+chmod +x nodemon
+```
+
+Try the Setup Backend again.
+
 #### Frontend
 
-Open another terminal, navigate to the `frontend` directory, and start the React application:
+Open another terminal, navigate to the `Ez-Rent/LoginRegister/client/` directory, and start the React application:
 
 ```bash
 cd /LoginRegister/client/
@@ -143,7 +154,7 @@ After running frontend commands you should see this,
 > vite
 
 
-  VITE v5.2.12  ready in XX ms
+  VITE v5.2.12  ready in XXX ms
 
   ➜  Local:   http://localhost:XXXX/
   ➜  Network: use --host to expose
@@ -159,37 +170,40 @@ To register a new user, click on the "Register" link and fill out the form.
 
 ### Login
 
-To log in, click on the "Login" link and enter your credentials.
+To log in, enter your credentials and click on "Login".
 
 ## Project Structure
 
 ```
 EzRent/
-├── backend/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   └── authController.js
-│   ├── models/
-│   │   └── User.js
-│   ├── routes/
-│   │   └── authRoutes.js
-│   ├── middleware/
-│   │   └── authMiddleware.js
-│   ├── .env
-│   ├── server.js
-│   └── package.json
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── App.js
+├── Login_Register
+|   ├── .vscode/
+│   │   └── settings.json
+│   ├── client
+│   │   ├── node_modules
+│   │   ├── public
+│   │   ├── src
+│   │   │   ├── assets
+│   │   │   ├── App.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── main.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   ├── .eslintrc.cjs
+│   │   │   ├── .gitignore
+│   │   │   ├── index.html
+│   │   │   ├── package-lock.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── vite.config.js
+│   ├── server
+│   │   ├── models
+│   │   │   ├── Users.js
+│   │   ├── node_modules
+│   │   ├── .env
 │   │   ├── index.js
-│   │   └── package.json
-├── .gitignore
-└── README.md
+│   │   ├── package-lock.json
+└────────── package.json
 ```
 
 ## Contributing
