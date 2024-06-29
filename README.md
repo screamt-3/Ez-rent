@@ -16,10 +16,101 @@ User Stories
 - As a fresh graduate, I want to be able to find affordable and convenient locations for my accommodations. I also want to be able to do so with minimal hassle and being well informed about the owner and the place I am settling for.
 
 Core Features
-Feature 1: Login and Registration page
-Feature 2: Filter rental selections based on multiple filters
-Feature 3: View conditions of the rooms
-Feature 4: Reviews/Ratings for both tenants, owners and apartments
+Feature 1: Login and Registration Page
+
+Purpose:
+The Login and Registration page allows new users to create an account and existing users to log in. This feature is essential for providing a personalized experience, managing user data securely, and enabling access to further functionalities of the platform.
+
+Implementation:
+Front-end: Designed using HTML, CSS, and JavaScript for a responsive and user-friendly interface. A form will collect user information such as username, email, and password.
+
+Back-end: Implemented using JavaScript Node.js. It will handle user data securely and communicate with our MongoDB database.
+
+Database: MongoDB
+
+Security: Implement authentication and authorization using JWT (JSON Web Tokens)
+
+Challenges:
+Ensuring data security and protecting against common vulnerabilities.
+Creating a seamless user experience while maintaining strong security measures.
+Managing session states and ensuring secure handling of user data.
+
+Limitations:
+Initial implementation may not support third-party logins (e.g., Google, Facebook), which can limit user convenience.
+
+Actions:
+Used bcrypt.js to hash passwords in front-end & only storing hash in back-end
+This ensures data privacy and security as our own databases do not store users personal passwords.
+
+
+
+Feature 2: Filter Rental Selections Based on Multiple Filters
+
+Purpose:
+This feature allows users to search and filter rental properties based on various criteria such as price range, location, number of bedrooms, amenities, etc. It enhances user experience by making it easier to find properties that match their preferences.
+
+Implementation:
+Front-end: A dynamic form with dropdowns, sliders, and checkboxes to select filter options. Implemented using React
+
+Back-end: API endpoints to fetch filtered data from the database. Built using Express.js (Node.js).
+
+Database: Efficient querying techniques and indexing to handle complex searches and ensure quick response times.
+
+Challenges:
+Handling a large number of filters efficiently without affecting performance.
+Ensuring the accuracy and relevance of the filtered results.
+
+Limitations:
+The initial filter set might be limited to just location or price and may need to be expanded based on user feedback.
+
+Actions:
+Front-end recieves the filter, currently based on type(Condo,HDB), location(Orchard,NUS,Changi) and number of rooms.
+Query is sent to back-end to handle filter process.
+Result is then sent from back-end to front-end to update properties shown.
+
+
+
+Progress has been made only up to this point as of Milestone 2
+
+Feature 3: View Conditions of the Rooms
+
+Purpose:
+Allows users to view detailed conditions of rental properties, including images, descriptions, and any notes about the property's state. This helps users make informed decisions and avoid properties that do not meet their standards.
+
+Implementation:
+Front-end: A detailed property view page with image sliders, descriptions, and condition notes. Implemented using HTML, CSS, and JavaScript frameworks.
+Back-end: API endpoints to fetch property details from the database. Built using Express.js (Node.js).
+
+Database: Store property details, images, and condition notes in our MongoDB database under rental
+
+Challenges:
+Ensuring that the property conditions are accurately described and up-to-date.
+Handling a large number of high-resolution images efficiently without affecting load times.
+
+Limitations:
+The accuracy of the conditions relies on the property owners and may require regular updates.
+Issues with storing good High-resolution images may slow down the page load time or not load properly.
+
+
+Feature 4: Reviews/Ratings for Property owner and Users
+Purpose:
+This feature allows users to leave and read reviews and ratings for Users, property owners. It helps build a trustworthy community by sharing experiences and feedback.
+
+Implementation:
+Front-end: Review and rating forms, and a display area for existing reviews. Implemented using HTML, CSS, and JavaScript frameworks.
+
+Back-end: API endpoints to handle review submissions and fetch existing reviews. Built using Express.js (Node.js).
+
+Database: MongoDB
+
+Challenges:
+Encouraging users to leave reviews and ratings while ensuring they are honest and constructive.
+Implementing a fair moderation system to handle inappropriate or false reviews.
+
+Limitations:
+Reviews are subjective and may not always provide an accurate representation of the property or user.
+The moderation process can be time-consuming and may delay the publication of reviews.
+
 
 
 # EzRent
@@ -192,19 +283,24 @@ EzRent/
 │   │   ├── src
 │   │   │   ├── assets
 │   │   │   ├── App.jsx
+│   │   │   ├── color.css
+│   │   │   ├── CreateRental.jsx
 │   │   │   ├── Home.jsx
 │   │   │   ├── Login.jsx
 │   │   │   ├── main.jsx
+│   │   │   ├── SearchBar.jsx
 │   │   │   ├── Signup.jsx
-│   │   │   ├── .eslintrc.cjs
-│   │   │   ├── .gitignore
-│   │   │   ├── index.html
-│   │   │   ├── package-lock.json
-│   │   │   ├── package.json
-│   │   │   ├── README.md
-│   │   │   ├── vite.config.js
+│   │   │   ├── SignupFail.jsx
+│   │   ├── .eslintrc.cjs
+│   │   ├── .gitignore
+│   │   ├── index.html
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── vite.config.js
 │   ├── server
 │   │   ├── models
+│   │   │   ├── Rentals.js
 │   │   │   ├── Users.js
 │   │   ├── node_modules
 │   │   ├── .env
