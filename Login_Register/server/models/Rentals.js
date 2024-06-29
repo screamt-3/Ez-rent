@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const RentalsSchema  = new mongoose.Schema({
-    name: String,
+    type: String,
     owner: String,
     location: String,
-    number_of_rooms: String
+    number_of_rooms: String,
 })
 
 const RentalsModel = mongoose.model("Rentals", RentalsSchema)

@@ -23,8 +23,8 @@ function CreateRental() {
     }
 
     return (
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-            <div className="bg-white p-3 rounded w-25">
+        <div className="d-flex justify-content-center align-items-center bg-blue-royal vh-100">
+            <div className="bg-white p-3 rounded w-30">
                 <h2>Rental Information</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -48,7 +48,7 @@ function CreateRental() {
                             type="text"
                             placeholder="e.g. Orchard"
                             autoComplete="off"
-                            name="type"
+                            name="location"
                             className="form-control rounded-0"
                             onChange={(e) => setLocation(e.target.value)}
                         />
@@ -66,11 +66,11 @@ function CreateRental() {
                             onChange={(e) => setNumberOfRooms(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-success w-100 rounded-0">
+                    <button type="submit" className="btn btn-default border w-100 bg-blue color-white rounded-2">
                         Create Rental
                     </button>
                     </form>
-                    <Link to="/home" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+                    <Link to="/home" style={{ marginTop: '10px'}} className="btn btn-default border w-100 bg-blue color-white rounded-2 text-decoration-none">
                         Back
                     </Link>
                 

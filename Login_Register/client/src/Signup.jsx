@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+
 
 function Signup() {
     const [name, setName] = useState()
@@ -9,19 +10,23 @@ function Signup() {
     const [password, setPassword] = useState()
     const navigate = useNavigate()
 
-        const handleSubmit = (e) => {
-            e.preventDefault()
-            axios.post('http://localhost:3001/register',{name, email, password})
-            .then(result => {console.log(result)
-            navigate('/login')
-            })
-            .catch(err => console.log(err))
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post('http://localhost:3001/register', { name, email, password })
+        .then(result => {console.log(result)
+            if(result.data === "Success")
+               navigate('/login')
+               
+            else(navigate('/SignUpFail'))
+                
+        })
+        .catch(err => console.log(err))
 
-        }
+    }
 
     return (
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-            <div className="bg-white p-3 rounded w-25">
+        <div className="d-flex justify-content-center align-items-center bg-blue-royal vh-100">
+            <div className="color-black bg-white p-3 rounded w-50">
                 <h2>Register</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -62,15 +67,15 @@ function Signup() {
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-success w-100 rounded-0">
-                        Register
+                    <button type="submit" className="btn btn-default w-100 rounded-2 bg-blue color-white">
+                        Sign Up
                     </button>
-                    </form>
-                    <p>Already Have an Account</p>
-                    <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                        Login
-                    </Link>
-                
+                </form>
+                <p>Already Have an Account?</p>
+                <Link to="/login" className="btn btn-defualt w-100 rounded-2 text-decoration-none bg-blue color-white">
+                    Login
+                </Link>
+
             </div>
         </div>
     );
