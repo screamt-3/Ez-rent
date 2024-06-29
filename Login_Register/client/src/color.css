@@ -1,0 +1,76 @@
+.bg-red {
+    background-color: red;
+  }
+  .bg-green {
+    background-color: green;
+  }
+  .bg-blue {
+    background-color: blue;
+  }
+  .bg-yellow {
+    background-color: yellow;
+  }
+  .bg-orange {
+    background-color: orange;
+  }
+  .bg-purple {
+    background-color: purple;
+  }
+  .bg-pink {
+    background-color: pink;
+  }
+  .bg-brown {
+    background-color: brown;
+  }
+  .bg-gray {
+    background-color: gray;
+  }
+  .bg-black {
+    background-color: black;
+  }
+  .bg-white {
+    background-color: white;
+  }
+  .bg-orange-red {
+    background-color: #FF5733;
+  }
+  .bg-green-lime {
+    background-color: #33FF57;
+  }
+  .bg-blue-royal {
+    background-color: #5b75ec;
+  }  
+  .bg-blue-dark {
+    background-color: #3946d8ee
+  }
+  .bg-pink-magenta {
+    background-color: #FF33FF;
+  }
+  .bg-indigo {
+    background-color: #5733FF;
+  }
+  .bg-cyan {
+    background-color: #33FFF5;
+  }
+  .bg-yellow-lemon {
+    background-color: #F5FF33;
+  }
+
+  .color-blue {
+    color: blue
+  }
+  .color-blue-dark {
+    color: #3946d8ee
+  }
+  .color-blue-royal {
+    color: #5b75ec;
+  }
+  .color-red {
+    color: #d72020;
+  }
+  .color-white {
+    color: white
+  }
+  .gradient-button-blue {
+    background: linear-gradient(to right, #33fff5ee, #33fff572);
+  }
