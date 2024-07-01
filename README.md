@@ -184,7 +184,7 @@ Navigate to the `./Ez-Rent/Login_Register/server/` directory and install depende
 
 ```bash
 cd ./Login_Register/server/
-npm install cors express mongoose nodemon dotenv
+npm install cors express mongoose nodemon bcryptjs dotenv 
 ```
 
 #### Frontend
@@ -193,7 +193,7 @@ Navigate to the `./Ez-Rent/Login_Register/client/` directory and install depende
 
 ```bash
 cd ../client/
-npm install axios bootstrap react react-dom react-router-dom
+npm install axios bootstrap react react-dom react-icons react-router-dom
 ```
 
 ### Set up Environment Variables
@@ -209,7 +209,7 @@ touch .env
 
 ```env
 PORT=3001
-mongoConnectionString = "mongodb://localhost:27017/Users"
+mongoConnectionString = "mongodb+srv://joel:joel123@atlascluster.j2o0oap.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
 ```
 
 ### Start the Application
