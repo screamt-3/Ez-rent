@@ -184,7 +184,7 @@ Navigate to the `./Ez-Rent/Login_Register/server/` directory and install depende
 
 ```bash
 cd ./Login_Register/server/
-npm install cors express mongoose nodemon bcryptjs dotenv 
+npm install cors express mongoose nodemon bcryptjs dotenv cookie-parser
 ```
 
 #### Frontend
