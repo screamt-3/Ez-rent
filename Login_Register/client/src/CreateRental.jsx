@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
@@ -14,13 +14,27 @@ function CreateRental() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/CreateRental',{type, owner, location, number_of_rooms})
+        axios.post('http://localhost:3001/CreateRental',
+            {type, owner, location, number_of_rooms},
+        { withCredentials: true}, )
         .then(result => {console.log(result)
         navigate('/home')
         })
         .catch(err => console.log(err))
 
     }
+
+    useEffect(() => {
+        axios.get(`http://localhost:3001/userid`,
+            { withCredentials: true},
+        )
+            .then(response => {
+                setOwner(response.data._id);
+            })
+            .catch(err => {
+                console.error('Error fetching rental:', err);
+            });
+    }, [owner]);
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-blue-royal vh-100">

@@ -15,6 +15,9 @@ const UsersSchema  = new mongoose.Schema({
         type: String,
         required: true
     },
+    rentals: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+         ref: 'rentals' }]
 })
 
 const UsersModel = mongoose.model("Users", UsersSchema)

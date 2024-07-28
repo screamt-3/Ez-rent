@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SearchBar = () => {
     const [input, setInput] = useState("")
@@ -49,12 +49,14 @@ export const SearchBar = () => {
                     Search
                 </button>
             </div>
-            <div style={{ width: "60%", margin: "0 auto", minHeight: "70vh"}}>
+            <div style={{ width: "60%", margin: "0 auto", minHeight: "70vh" }}>
                 {results.map((rental) => (
-                        <div key={rental._id} className="my-3 p-3 border bg-white rounded-2">
+                        <div key={rental._id} className="">
+                            <Link to={`/rentals/${rental._id}`} className="btn my-3 p-3 border bg-white rounded-2 w-100">
                             <h3>Type: {rental.type}</h3>
                             <p>Location: {rental.location}</p>
                             <p>Number of Rooms: {rental.number_of_rooms}</p>
+                        </Link>
                         </div>
                 ))}
             </div>

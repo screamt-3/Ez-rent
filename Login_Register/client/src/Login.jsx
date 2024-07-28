@@ -1,34 +1,37 @@
-import React from'react'
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import axios from 'axios'
-import { useNavigate } from "react-router-dom";
-
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import './color.css';
 
 function Login() {
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    const navigate = useNavigate()
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post('http://localhost:3001/login', {email, password})
-        .then(result => {console.log(result)
-            if(result.data === "Success")
-               navigate('/home')
-            else(console.log(result.data))
-        })
-        .catch(err => console.log(err))
+        e.preventDefault();
+        axios.post('http://localhost:3001/login', 
+            { email, password },
+            { withCredentials: true }, )
+            .then(result => {
+                if (result.data === "Success") {
+                    //navigate(`/user/${result.data}`);
+                    navigate(`/home`);
+                } else {
+                    console.log(result.data);
+                }
+            })
+            .catch(err => console.log(err));
+    };
+    
 
-    }
-
-
-    return(
+    return (
         <div className="d-flex justify-content-center align-items-center bg-blue-royal vh-100">
             <div className="bg-white p-3 rounded w-30 color-black">
                 <h2 style={{ textAlign: 'center' }}>
                     Welcome to Ez-Rent<br />
-                    Login</h2>
+                    Login
+                </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="email">
@@ -58,15 +61,14 @@ function Login() {
                     <button type="submit" className="btn btn-default border w-100 rounded-2 bg-blue color-white">
                         Login
                     </button>
-                    </form>
-                    <p>Already Have an Account?</p>
-                    <Link to="/Register" className="btn btn-default border w-100 bg-blue color-white rounded-2 text-decoration-none">
-                        Sign-Up
-                    </Link>
-                
+                </form>
+                <p>Already Have an Account?</p>
+                <Link to="/Register" className="btn btn-default border w-100 bg-blue color-white rounded-2 text-decoration-none">
+                    Sign-Up
+                </Link>
             </div>
         </div>
-    )
+    );
 }
 
 export default Login;
