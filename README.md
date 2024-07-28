@@ -18,29 +18,45 @@ User Stories
 Core Features
 Feature 1: Login and Registration Page
 
+
 Purpose:
-The Login and Registration page allows new users to create an account and existing users to log in. This feature is essential for providing a personalized experience, managing user data securely, and enabling access to further functionalities of the platform.
+The Login and Registration page allows new users to create an account and existing users to log in. This feature is essential for providing a personalized experience, managing user data securely, and enabling access to further functionalities of the platform
 
 Implementation:
-Front-end: Designed using HTML, CSS, and JavaScript for a responsive and user-friendly interface. A form will collect user information such as username, email, and password.
+Front-end: 
+- Designed using HTML, CSS, and JavaScript for a responsive and user-friendly interface.
+- A form will collect user information such as username, email, and password.
 
-Back-end: Implemented using JavaScript Node.js. It will handle user data securely and communicate with our MongoDB database.
+Back-end: 
+- Implemented using JavaScript Node.js. It will handle user data securely and communicate with our MongoDB database.
+- Handles user data securely and communicates with the MongoDB database
 
-Database: MongoDB
+Database: 
+- MongoDB
 
-Security: Implement authentication and authorization using JWT (JSON Web Tokens)
+Security: 
+- Implement authentication and authorization using JWT (JSON Web Tokens)
+
+Workflow:
+- When a user tries to access our web application, they are first directed to our login page.
+- The user provides their credentials (e.g., username/email and password) on the login page.
+- The backend verifies the credentials against the MongoDB database.
+- Upon successful authentication, the backend generates a JWT token containing user information required for the application.
+- The user is then directed to the main dashboard with the JWT token used to authorise access to protected routes and resources.
+
+
 
 Challenges:
-Ensuring data security and protecting against common vulnerabilities.
-Creating a seamless user experience while maintaining strong security measures.
-Managing session states and ensuring secure handling of user data.
+- Ensuring data security and protecting against common vulnerabilities.
+- Creating a seamless user experience while maintaining strong security measures.
+- Managing session states and ensuring secure handling of user data.
 
 Limitations:
-Initial implementation may not support third-party logins (e.g., Google, Facebook), which can limit user convenience.
+- Initial implementation may not support third-party logins (e.g., Google, Facebook), which can limit user convenience.
 
 Actions:
-Used bcrypt.js to hash passwords in front-end & only storing hash in back-end
-This ensures data privacy and security as our own databases do not store users personal passwords.
+- Used bcrypt.js to hash passwords in front-end & only storing hash in back-end
+- This ensures data privacy and security as our own databases do not store users personal passwords.
 
 
 
